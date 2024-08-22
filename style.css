@@ -1,0 +1,58 @@
+/* Basic reset and smooth scrolling */
+body, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* Full-height sections */
+.section {
+    height: 100vh;
+    width: 100%;
+}
+
+/* Section Background Colors */
+#section1 {
+    background-color: #dcdddf;
+}
+
+#section2 {
+    background-color: #939add;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Padding around the navbar */
+}
+
+.navbar-light {
+    background-color: #dcdddf;
+}
+
+.navbar-dark {
+    background-color: #939add;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row; /* Stack logo and links vertically on small screens */
+        align-items: flex-start; /* Align items to the start of the flex container */
+    }
+
+    .navbar-nav {
+        width: 100%; /* Full width for nav links */
+        flex-direction: column; /* Stack nav links vertically */
+        gap: 10px; /* Adjust spacing */
+    }
+
+    .navbar-logo {
+        margin-bottom: 10px; /* Space between logo and nav links */
+    }
+}
