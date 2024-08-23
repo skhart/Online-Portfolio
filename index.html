@@ -4,36 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scroll Navbar</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-light">
-        <section class="navbar">
-            <div class="logo">
-                <a href="/">
-                    <div class="logo-img">
-                        <img src="Skhart AYE.png" alt="Logo">
-                    </div>
-                </a>
-            </div>
-            <div class="nav-d">
-                <a href="#section1" class="nav-item nav-link active">Home</a>
-                <a href="#section2" class="nav-item nav-link">Services</a>
-                <a href="#section1" class="nav-item nav-link">About</a>
-                <a href="#section2" class="nav-item nav-link">Contact</a>
-            </div>
-            <div class="nav-m">
-                <button aria-label="Toggle Menu" class="menu-toggle">
-                    <div class="first"></div>
-                    <div class="second"></div>
-                    <div class="third"></div>
-                </button>
-            </div>
-        </section>
+    <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/">
+            <img src="Skhart AYE.png" alt="Logo" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#section1">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section2">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section1">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section2">Contact</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-    <div id="section1" class="section">Section 1 Content</div>
-    <div id="section2" class="section">Section 2 Content</div>
+    <div id="section1" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto text-left">
+                    <h3>Hi, my name is</h3>
+                    <h1>Skhart Mercado</h1>
+                    <p>This is the first section of the page. You can add any content here, like text, images, or even interactive elements.</p>
+                    <img src="me.jpg" alt="Example Image" class="img-fluid mt-4 custom-img">
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <div id="section2" class="section">
 
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
