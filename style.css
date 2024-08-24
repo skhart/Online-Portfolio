@@ -7,28 +7,30 @@ body, html {
 
 /* Full-height sections */
 .section {
-    padding-top: 120px; /* Increase top padding to push content below the navbar */
+    padding-top: 120px;
     padding-bottom: 20px;
     text-align: center;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #dcdddf; 
+    background-color: #dcdddf;
     width: 100%;
 }
 
 /* Section Background Colors */
 #section1 {
-    background-color: #dcdddf;
+    background-color: #dcdddf; /* Red background similar to the example */
 }
 
 #section2 {
-    background-color: #939add;
+    background-color: white;
 }
+
 .container {
     max-width: 960px;
 }
+
 /* Navbar Custom Styles */
 .navbar {
     transition: background-color 0.3s ease;
@@ -39,23 +41,70 @@ body, html {
 }
 
 .navbar-dark {
-    background-color: #939add !important;
+    background-color: white !important;
 }
+
 /* Custom Image Styling */
 .custom-img {
-    max-width: 60%; /* Further reduce image width */
+    max-width: 100%; /* Adjusted image width */
     height: auto;
-    margin-top: 20px; /* Space between text and image */
+    margin-top: 20px;
 }
+
 /* Responsive Image Adjustment */
 @media (max-width: 768px) {
     .custom-img {
-        max-width: 90%; /* Image takes up more space on smaller screens */
+        max-width: 90%;
     }
 }
 
 /* Adjust Text Spacing */
 h1, h3, p {
     margin-bottom: 20px;
-    left: 0px;
+}
+/* About Section Styling */
+#about {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #f7f7f7;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f44336; 
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.now-playing {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #f44336;
+    margin-top: 40px;
+}
+
+.refresh-btn {
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.song-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.player {
+    margin-bottom: 20px;
+}
+
+.spotify-api {
+    font-size: 0.9rem;
+    color: #999;
 }
