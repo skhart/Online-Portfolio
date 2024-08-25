@@ -15,30 +15,43 @@ window.addEventListener('scroll', function() {
       navbar.classList.remove('navbar-dark');
   }
 });
-document.addEventListener("DOMContentLoaded", function() {
+document.getElementById('refreshButton').addEventListener('click', function() {
+  // Array of songs with title and Spotify embed link
   const songs = [
-      { title: "Odo", src: "https://open.spotify.com/track/7z6qHGEKxRtwtYym2epV7l?si=ee56c83f32f345a3" },
-      { title: "Usseewa", src: "https://open.spotify.com/track/6EzZn96uOc9JsVGNRpx06n?si=cf2ac03f5e514ed8" },
-      { title: "Gira Gira", src: "https://open.spotify.com/track/0vHCmjN8pepvdu41r69gcB?si=dc7a8d8a85044e16" }
+      { title: 'Ado - odo', src: 'https://open.spotify.com/embed/track/7z6qHGEKxRtwtYym2epV7l?utm_source=generator' },
+      { title: 'Ado - Gira Gira', src: 'https://open.spotify.com/embed/track/0vHCmjN8pepvdu41r69gcB?utm_source=generator' },
+      { title: 'Ado - RULE', src: 'https://open.spotify.com/embed/track/3qik29BKjJFcucGkhGbhHj?utm_source=generator' },
+      { title: 'Ado - Aishite Aishite', src: 'https://open.spotify.com/embed/track/4gpvY7b9wHA9G1ZsMDu15b?utm_source=generator' },
+      { title: 'Gura & Mori Calliope - Q', src: 'https://open.spotify.com/embed/track/51CXAV2GNNL3deCtcXpCeu?utm_source=generator' },
+      { title: 'Hakos Baelz - Psycho', src: 'https://open.spotify.com/embed/track/5QXpY51wFeGQ51WdPNMyru?utm_source=generator' },
+      { title: 'Ado - RULE', src: 'https://open.spotify.com/embed/track/3qik29BKjJFcucGkhGbhHj?utm_source=generator' },
   ];
+  
+  // Randomly select a song
+  const randomSong = songs[Math.floor(Math.random() * songs.length)];
 
-  function setRandomSong() {
-      const randomIndex = Math.floor(Math.random() * songs.length);
-      const selectedSong = songs[randomIndex];
-      const audioPlayer = document.getElementById("audioPlayer");
-      const audioSource = document.getElementById("audioSource");
-      const songTitle = document.getElementById("songTitle");
+  // Update the song title and Spotify player source
+  document.getElementById('songTitle').textContent = randomSong.title;
+  document.getElementById('spotifyPlayer').src = randomSong.src;
+});
+document.addEventListener("DOMContentLoaded", function() {
+  // Select all read-more buttons
+  const readMoreButtons = document.querySelectorAll(".read-more");
 
-      audioSource.src = selectedSong.src;
-      audioPlayer.load();
-      audioPlayer.play();
+  readMoreButtons.forEach(function(button) {
+      button.addEventListener("click", function(event) {
+          event.preventDefault();
 
-      songTitle.textContent = `Ado - ${selectedSong.title}`;
-  }
-
-  document.getElementById("refreshButton").addEventListener("click", setRandomSong);
-
-  // Set an initial song when the page loads
-  setRandomSong();
+          // Toggle the visibility and animation of the more-text paragraph
+          const moreText = this.previousElementSibling;
+          if (moreText.classList.contains("open")) {
+              moreText.classList.remove("open");
+              this.textContent = "Read More";
+          } else {
+              moreText.classList.add("open");
+              this.textContent = "Read Less";
+          }
+      });
+  });
 });
 
