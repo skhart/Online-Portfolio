@@ -202,7 +202,7 @@ p {
 }
 
 .footer {
-    background-color: #343a40; /* Dark background color */
+    background-color: #333; /* Dark background color */
     color: #f8f9fa; /* Light text color */
     padding: 10px 0;
     width: 100%;
@@ -237,7 +237,6 @@ p {
         padding: 20px;
     }
 }
-
 
 .container-fluid {
     padding-left: 15px;
